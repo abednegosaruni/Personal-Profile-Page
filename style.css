@@ -1,0 +1,188 @@
+:root {
+  --bg: linear-gradient(135deg, #adaf92, #b491be);
+  --text: #1f2937;
+  --text-soft: hsla(0, 0%, 6%, 0.493);
+  --primary: hsl(66, 21%, 47%);
+  --primary-soft: hsl(256, 54%, 58%);
+  --card: #e77c7cdd;
+  --border: #789632;
+  --header: #657c4b;
+  --footer: #1e3b28;
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  
+  top: 0;
+  background: var(--header);
+  color: #f8fafc;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+header img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-soft);
+}
+
+header p {
+  margin: 0.7rem 0 0.5rem;
+  font-weight: 700;
+}
+
+navbar,
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.65rem;
+}
+
+navbar a,
+nav a {
+  color: #eff6ff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+navbar a:hover,
+nav a:hover {
+  background: var(--primary);
+  transform: translateY(-1px);
+}
+
+main {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+  flex: 1;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 20px rgba(49, 46, 129, 0.15);
+  padding: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+section h1,
+section h2 {
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+p,
+li,
+ol {
+  color: var(--text-soft);
+  margin-bottom: 0.6rem;
+}
+
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0.3rem 0;
+}
+
+main img {
+  width: min(160px, 28vw);
+  display: block;
+  margin: 0 auto 0.9rem;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form textarea,
+form button {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 0.6rem 0.65rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  font-size: 1rem;
+}
+
+form textarea {min-height: 120px; resize: vertical;}
+
+form button {
+  background: var(--primary);
+  color: #f8fafc;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+}
+
+form button:hover {
+  background: var(--primary-soft);
+}
+
+footer {
+  background: var(--footer);
+  color: #e2e8f0;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #c7d2fe;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #facc15;
+}
+
+@media (max-width: 680px) {
+  main {padding: 1rem 0.8rem 1.2rem;}
+  section {padding: 1rem;}
+  navbar,
+  nav {gap: 0.55rem;}
+}
