@@ -1,0 +1,118 @@
+
+/* =========================
+   CSS CUSTOM PROPERTIES
+========================= */
+:root {
+    --primary: #1e3a8a;
+    --accent: #2563eb;
+    --background: #f4f6f8;
+    --text: #333333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Google Font Alternative */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Improved Navigation */
+nav a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+/* Box Model Practice */
+section {
+    border: 2px solid var(--primary);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+/* Profile Image Effects */
+.profile-image img {
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Skills List */
+ol li {
+    padding: 8px;
+    margin: 8px 0;
+}
+
+/* Contact Links */
+section a {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+    }
+
+    main {
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Phones */
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
